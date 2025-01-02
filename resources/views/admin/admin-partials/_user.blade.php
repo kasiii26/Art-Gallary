@@ -10,6 +10,8 @@
         <div class="container">
             <br>
             <br>
+            <br>
+            <br>
             <div class="card">
                 <div class="card-header">
                     Art Gallary Users
@@ -27,7 +29,7 @@
                             <th>S/N</th>
                             <th>Full Name</th>
                             <th>Email</th>
-                            <th>Phone Number</th>
+                            <!-- <th>Phone Number</th> -->
                             <th>Registration Date</th>
                             <th>Last Update</th>
                             <th >Role</th>
@@ -41,7 +43,7 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
-                                <td>{{$user->phone_number}}</td>
+                                <!-- <td>{{$user->phone_number}}</td> -->
                                 <td>{{$user->created_at}}</td>
                                 <td>{{$user->updated_at}}</td>
                                 

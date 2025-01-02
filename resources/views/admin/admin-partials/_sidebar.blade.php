@@ -12,26 +12,22 @@
     <meta name="author" content="">
 
     <title>SB Admin 2 - Dashboard</title>
-
-    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
-    <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-min2.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
+    
     <div id="wrapper">
 
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-<!-- Sidebar - Brand -->
+
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
     <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
@@ -39,21 +35,21 @@
     <div class="sidebar-brand-text mx-3"> Art Gallary </div>
 </a>
 
-<!-- Divider -->
+
 <hr class="sidebar-divider my-0">
 
-<!-- Nav Item - Dashboard -->
+<
 <li class="nav-item active">
     <a class="nav-link" href="{{ route('home') }}">
         <svg width="30px" height="30px" viewBox="0 0 24 24" id="dashboard" xmlns="http://www.w3.org/2000/svg" class="icon multi-color"><path id="secondary-fill" d="M9,12H4a1,1,0,0,1-1-1V6h7v5A1,1,0,0,1,9,12Zm12,8V15H14v5a1,1,0,0,0,1,1h5A1,1,0,0,0,21,20Z" style="fill: rgb(44, 169, 188); stroke-width: 2;"></path><path id="tertiary-fill" d="M9,21H4a1,1,0,0,1-1-1V19h7v1A1,1,0,0,1,9,21ZM21,7V6H14V7a1,1,0,0,0,1,1h5A1,1,0,0,0,21,7Z" style="fill: #b7b7b7; stroke-width: 2;"></path><path id="primary-stroke" d="M9,12H4a1,1,0,0,1-1-1V4A1,1,0,0,1,4,3H9a1,1,0,0,1,1,1v7A1,1,0,0,1,9,12ZM21,7V4a1,1,0,0,0-1-1H15a1,1,0,0,0-1,1V7a1,1,0,0,0,1,1h5A1,1,0,0,0,21,7ZM10,20V17a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1v3a1,1,0,0,0,1,1H9A1,1,0,0,0,10,20Zm11,0V13a1,1,0,0,0-1-1H15a1,1,0,0,0-1,1v7a1,1,0,0,0,1,1h5A1,1,0,0,0,21,20Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></svg>
         <span>Dashboard</span></a>
 </li>
 
-<!-- Divider -->
+
 <hr class="sidebar-divider">
 
 
-<!-- Nav Item - Tables -->
+
 <li class="nav-item">
     <a class="nav-link" href="{{ route('posts.index') }}">
         <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -65,16 +61,10 @@
 </svg>
         <span>Post</span></a>
 </li>
-    <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-        </div>
-    </div> -->
+    
 </li>
 
-<!-- Nav Item - Tables -->
+
 <li class="nav-item">
     @if(Auth::check() && Auth::user()->role == '1')
     <a class="nav-link" href="{{ route('users.users') }}">
@@ -86,19 +76,10 @@
     </a>
     @endif
 </li>
-    <!-- <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-        data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-        </div>
-    </div> -->
+    
 </li>
 
-<!-- Divider -->
+
 
 <li class="nav-item">
 @if(Auth::check() && (Auth::user()->role == '1' || Auth::user()->role == 'Curator'))
@@ -110,31 +91,16 @@
         @endif
 </li>
 
-<!-- Nav Item - Tables -->
-<li class="nav-item">
 
+<!-- <li class="nav-item">
     <a class="nav-link" href="">
         <svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.975 7.975a3.5 3.5 0 1 0-4.95-4.95m4.95 4.95a3.5 3.5 0 1 1-4.95-4.95m4.95 4.95L18.5 5.5l-2.475-2.475"/><path fill="#000000" fill-rule="evenodd" d="M21 11.502a6.48 6.48 0 0 1-2.5.498A6.495 6.495 0 0 1 13 8.966V16a1 1 0 1 1-2 0V8a1 1 0 0 1 1.178-.984A6.515 6.515 0 0 1 12.498 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6.498zM8 10a1 1 0 0 1 1 1v5a1 1 0 1 1-2 0v-5a1 1 0 0 1 1-1zm8 3a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z" clip-rule="evenodd"/></svg>
         <span>Restricted</span></a>
        
 </li>
     </a>
-    <!-- <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
-        </div>
-    </div> -->
-</li>
-
-<!-- Nav Item - Tables -->
-<li class="nav-item">
+</li> -->
+<!-- <li class="nav-item">
     <a class="nav-link" href="tables.html">
         <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Interface / Settings">
@@ -145,17 +111,9 @@
         </g>
         </svg>
         <span>Settings</span></a>
-</li>
-
-<!-- Divider -->
-
-
-
-
-
-
+</li> -->
 </ul>
-<!-- End of Sidebar -->
+
 
 
 

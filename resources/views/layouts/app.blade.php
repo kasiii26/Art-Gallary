@@ -84,7 +84,7 @@
                             <a class="dropdown-item" href="{{ route('category', ['id' => 3]) }}">{{ __('Folk Art') }}</a>
                             <a class="dropdown-item" href="{{ route('category', ['id' => 1]) }}">{{ __('Digital Art') }}</a>
                             <a class="dropdown-item" href="{{ route('category', ['id' => 2]) }}">{{ __('Performance Art') }}</a>
-                            <a class="dropdown-item" href="{{ route('category', ['id' => 3]) }}">{{ __('Category 3Street Art and Graffiti') }}</a>
+                            <a class="dropdown-item" href="{{ route('category', ['id' => 3]) }}">{{ __('Street Art and Graffiti') }}</a>
                         </div>
                     </li>
                         

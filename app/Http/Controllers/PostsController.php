@@ -67,6 +67,10 @@ public function update(Request $request)
 
     $post = Post::findOrFail($request->post_id);
 
+    if (Auth::user()->id !== $post->user_id && Auth::user()->role !== 1) {
+     return redirect()->route('posts.index')->with('error', 'You are not authorized to update this post.');
+    }
+
     if ($request->hasFile('image')) {
         // Store the new image
         $path = $request->file('image')->store('posts', 'public');
@@ -81,15 +85,21 @@ public function update(Request $request)
     return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
 }
 public function destroy($id)
-{
-    $post = Post::findOrFail($id);
-    // Delete the associated image if necessary
-    if ($post->image_path && Storage::exists($post->image_path)) {
-        Storage::delete($post->image_path);
-    }
-    $post->delete();
+    {
+        $post = Post::findOrFail($id);
 
-    return redirect()->route('posts.index')->with('success', 'Post deleted successfully.');
-}
+        // Check if the authenticated user is the owner of the post
+        if (Auth::user()->id !== $post->user_id && Auth::user()->role !== 1) {
+            return redirect()->route('posts.index')->with('error', 'You are not authorized to delete this post.');
+        }
+
+        // Delete the associated image if necessary
+        if ($post->image_path && Storage::exists($post->image_path)) {
+            Storage::delete($post->image_path);
+        }
+        $post->delete();
+
+        return redirect()->route('posts.index')->with('success', 'Post deleted successfully.');
+    }
 
 }
