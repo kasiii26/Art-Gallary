@@ -4,6 +4,10 @@
 @section('content')
 <div class="container">
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>All Posts</h1>
         <a href="{{ route('posts.create') }}" class="btn btn-primary">Create New Post</a>
